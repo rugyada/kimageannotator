@@ -19,7 +19,7 @@ BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6LinguistTools)
 
-%rename %name-Qt6
+%rename kimageannotator
 
 %description
 kImageAnnotator is a tool for annotating images.
@@ -35,9 +35,10 @@ Requires:   %name = %version
 %files
 %doc README.md
 %license LICENSE
-%{_libdir}/*
+%{_libdir}/libkImageAnnotator.so*
 %{_datadir}/*
 
 %files devel
 %{_includedir}/*
-
+%{_libdir}/cmake/*
+%{_libdir}/libkImageAnnotator.so*
